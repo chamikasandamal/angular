@@ -2,197 +2,131 @@
 
 Angular supports most recent browsers. This includes the following specific versions:
 
-
 <table>
-
   <tr>
-
     <th>
       Chrome
     </th>
-
     <th>
       Firefox
     </th>
-
     <th>
       Edge
     </th>
-
     <th>
       IE
     </th>
-
     <th>
       Safari
     </th>
-
     <th>
       iOS
     </th>
-
     <th>
       Android
     </th>
-
     <th>
       IE Mobile
     </th>
-
   </tr>
-
   <tr>
-
     <td>
       latest
     </td>
-
     <td>
       latest
     </td>
-
     <td>
       14
     </td>
-
     <td>
       11
     </td>
-
     <td>
       10
     </td>
-
     <td>
       10
     </td>
-
     <td>
       Nougat (7.0)<br>Marshmallow (6.0)
     </td>
-
     <td>
       11
     </td>
-
   </tr>
-
   <tr>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
       13
     </td>
-
     <td>
       10
     </td>
-
     <td>
       9
     </td>
-
     <td>
       9
     </td>
-
     <td>
       Lollipop<br>(5.0, 5.1)
     </td>
-
     <td>
-
     </td>
-
   </tr>
-
   <tr>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
       9
     </td>
-
     <td>
       8
     </td>
-
     <td>
       8
     </td>
-
     <td>
       KitKat<br>(4.4)
     </td>
-
     <td>
-
     </td>
-
   </tr>
-
   <tr>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
-
     </td>
-
     <td>
       7
     </td>
-
     <td>
       7
     </td>
-
     <td>
       Jelly Bean<br>(4.1, 4.2, 4.3)
     </td>
-
     <td>
-
     </td>
-
   </tr>
-
 </table>
 
 <div class="l-sub-section">
-
 Angular's continuous integration process runs unit tests of the framework on all of these browsers for every pull request,
 using <a href="https://saucelabs.com/">SauceLabs</a> and
 <a href="https://www.browserstack.com">Browserstack</a>.
-
 </div>
 
 
@@ -205,11 +139,9 @@ You compensate by loading polyfill scripts ("polyfills") for the browsers that y
 The [table below](#polyfill-libs) identifies most of the polyfills you might need.
 
 <div class="alert is-important">
-
 The suggested polyfills are the ones that run full Angular applications.
 You may need additional polyfills to support features not covered by this list.
 Note that polyfills cannot magically transform an old, slow browser into a modern, fast one.
-
 </div>
 
 ## Enabling polyfills
@@ -261,61 +193,38 @@ These are the polyfills required to run an Angular application on each supported
 
 
 <table>
-
   <tr style="vertical-align: top">
-
     <th>
       Browsers (Desktop & Mobile)
     </th>
-
     <th>
       Polyfills Required
     </th>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
       Chrome, Firefox, Edge, Safari 9+
     </td>
-
     <td>
-
       [ES7/reflect](guide/browser-support#core-es7-reflect) (JIT only)
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
       Safari 7 & 8, IE10 & 11, Android 4.1+
     </td>
-
     <td>
-
-
       [ES6](guide/browser-support#core-es6)
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
       IE9
     </td>
-
     <td>
-
-
       [ES6<br>classList](guide/browser-support#classlist)
-
     </td>
-
   </tr>
-
 </table>
 
 
@@ -330,121 +239,77 @@ Here are the features which may require additional polyfills:
 
 
 <table>
-
   <tr style="vertical-align: top">
-
     <th>
       Feature
     </th>
-
     <th>
       Polyfill
     </th>
-
     <th style="width: 50%">
        Browsers (Desktop & Mobile)
     </th>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
-
       [JIT compilation](guide/aot-compiler). 
       Required to reflect for metadata.
     </td>
-
     <td>
-
       [ES7/reflect](guide/browser-support#core-es7-reflect)
     </td>
-
     <td>
       All current browsers.
       Enabled by default.
       Can remove If you always use AOT and only use Angular decorators.
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
-
       [Animations](guide/animations)
     </td>
-
     <td>
-
-
       [Web Animations](guide/browser-support#web-animations)
     </td>
-
     <td>
       All but Chrome and Firefox<br>Not supported in IE9
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
-
     If you use the following deprecated i18n pipes: [date](api/common/DeprecatedDatePipe), [currency](api/common/DeprecatedCurrencyPipe), [decimal](api/common/DeprecatedDecimalPipe) and [percent](api/common/DeprecatedPercentPipe)
     </td>
-
     <td>
-
-
       [Intl API](guide/browser-support#intl)
     </td>
-
     <td>
       All but Chrome, Firefox, Edge, IE11 and Safari 10
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
-
        [NgClass](api/common/NgClass) on SVG elements
     </td>
-
     <td>
-
-
       [classList](guide/browser-support#classlist)
     </td>
-
     <td>
       IE10, IE11
     </td>
-
   </tr>
-
   <tr style="vertical-align: top">
-
     <td>
-
       [Http](guide/http) when sending and receiving binary data
     </td>
-
     <td>
-
       [Typed&nbsp;Array](guide/browser-support#typedarray)<br>
       [Blob](guide/browser-support#blob)<br>
       [FormData](guide/browser-support#formdata)
     </td>
-
     <td>
       IE 9
     </td>
-
   </tr>
-
 </table>
 
 
@@ -454,152 +319,105 @@ Below are the polyfills which are used to test the framework itself. They are a 
 
 
 <table>
-
   <tr>
-
     <th>
       Polyfill
     </th>
-
     <th>
       License
     </th>
-
     <th>
       Size*
     </th>
-
   </tr>
-
   <tr>
-
     <td>
-
       <a id='core-es7-reflect' href="https://github.com/zloirock/core-js/blob/master/es7/reflect.js">ES7/reflect</a>
     </td>
-
     <td>
       MIT
     </td>
-
     <td>
       0.5KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
       <a id='core-es6' href="https://github.com/zloirock/core-js">ES6</a>
     </td>
-
     <td>
       MIT
     </td>
-
     <td>
       27.4KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
       <a id='classlist' href="https://github.com/eligrey/classList.js">classList</a>
     </td>
-
     <td>
       Public domain
     </td>
-
     <td>
       1KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
       <a id='intl' href="https://github.com/andyearnshaw/Intl.js">Intl</a>
     </td>
-
     <td>
       MIT / Unicode license
     </td>
-
     <td>
       13.5KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
        <a id='web-animations' href="https://github.com/web-animations/web-animations-js">Web Animations</a>
     </td>
-
     <td>
       Apache
     </td>
-
     <td>
       14.8KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
       <a id='typedarray' href="https://github.com/inexorabletash/polyfill/blob/master/typedarray.js">Typed Array</a>
     </td>
-
     <td>
       MIT
     </td>
-
     <td>
       4KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
        <a id='blob' href="https://github.com/eligrey/Blob.js">Blob</a>
     </td>
-
     <td>
       MIT
     </td>
-
     <td>
       1.3KB
     </td>
-
   </tr>
-
   <tr>
-
     <td>
        <a id='formdata' href="https://github.com/francois2metz/html5-formdata">FormData</a>
     </td>
-
     <td>
       MIT
     </td>
-
     <td>
       0.4KB
     </td>
-
   </tr>
-
 </table>
 
 
